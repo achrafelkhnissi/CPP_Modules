@@ -22,3 +22,27 @@
 |  7  | [CPP_06](https://github.com/achrafelkhnissi/CPP_Modules/tree/master/Module_06) | Scalar conversion       | C++ casts  | [![ael-khni's 42 CPP Module 06 Score](https://badge42.vercel.app/api/v2/cl10eh4l9000609jpe6hwaodr/project/2705729)](https://github.com/JaeSeoKim/badge42) |
 |  8  | [CPP_07](https://github.com/achrafelkhnissi/CPP_Modules/tree/master/Module_07) | A few functions and class template       | C++ templates   | [![ael-khni's 42 CPP Module 07 Score](https://badge42.vercel.app/api/v2/cl10eh4l9000609jpe6hwaodr/project/2720446)](https://github.com/JaeSeoKim/badge42)  |
 |  9  | [CPP_08](https://github.com/achrafelkhnissi/CPP_Modules/tree/master/Module_08) | Playing with templates and containers      | Templated containers, iterators, algorithms    | [![ael-khni's 42 CPP Module 08 Score](https://badge42.vercel.app/api/v2/cl10eh4l9000609jpe6hwaodr/project/2723075)](https://github.com/JaeSeoKim/badge42) |
+
+
+## Author
+
+- [`@achrafelkhnissi`]() | Software Engineer Student
+
+    > Reach out to me if you need any help or have any questions.
+
+	<a href="mailto:achraf.elkhnissi@icloud.com">
+		<img alt="Feel free to contact me" src="https://img.shields.io/badge/-Ask_me_anything-blue?style=flat&logo=Gmail&logoColor=white&link=mailto:achraf.elkhnissi@gmail.com&color=3d85c6" />
+	</a>
+	<span> * </span>
+    <a href="https://www.linkedin.com/in/achrafelkhnissi/">
+        <img alt="Linkedin Profile" src="https://img.shields.io/badge/-Linkedin-0072b1?style=flat&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/achrafelkhnissi/" />
+    </a>
+    <span> * </span>
+    <a href="https://twitter.com/suprivada">
+        <img alt="Twitter Profile" src="https://img.shields.io/badge/-Twitter-0072b1?style=flat&logo=Twitter&logoColor=white&link=https://www.linkedin.com/in/achrafelkhnissi/&color=1DA1F2" />
+    </a>
+    <span> * </span>
+    <a href="https://www.linkedin.com/in/achrafelkhnissi/">
+        <img alt="Discord Profile" src="https://img.shields.io/badge/-Discord-0072b1?style=flat&logo=Discord&logoColor=white&link=https://www.linkedin.com/in/achrafelkhnissi/&color=7289da" />
+    </a>
+---
