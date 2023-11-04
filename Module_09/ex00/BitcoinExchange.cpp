@@ -37,19 +37,20 @@ BitcoinExchange::~BitcoinExchange() {}
 
 void BitcoinExchange::run(const string &filename)
 {
-    if (!fileExists(filename)) {
+    std::ifstream   file(filename);
+    string          line;
+
+    if (!file.is_open()) {
         std::cout << "Error: file does not exist" << std::endl;
         exit(EXIT_FAILURE);
     }
-    if (fileIsEmpty(filename)) {
+
+    if (file.peek() == std::ifstream::traits_type::eof()) {
         std::cout << "Error: file is empty" << std::endl;
         exit(EXIT_FAILURE);
     }
 
-    std::ifstream   file(filename);
-    string          line;
-
-    std::getline(file, line);
+    std::getline(file, line); // skip first line
 
     if (line != "date | value") {
         std::cout << "Error: invalid file format" << std::endl;
@@ -181,13 +182,21 @@ string BitcoinExchange::trim(const string& str) {
 bool BitcoinExchange::fileExists(const string &filename)
 {
     std::fstream file(filename);
-    return file.good();
+
+    bool exists = file.good();
+
+    file.close();
+    return exists;
 }
 
 bool BitcoinExchange::fileIsEmpty(const string &filename)
 {
     std::ifstream file(filename);
-    return file.peek() == std::ifstream::traits_type::eof();
+
+    bool isEmpty = file.peek() == std::ifstream::traits_type::eof();
+
+    file.close();
+    return isEmpty;
 }
 
 void BitcoinExchange::validateNumber(const string &str) {
