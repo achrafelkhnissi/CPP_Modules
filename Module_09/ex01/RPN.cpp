@@ -29,11 +29,10 @@ RPN::~RPN() {}
 
 void RPN::run(std::string input)
 {
-    std::stringstream ss;
+    std::stringstream ss(input);
     std::string operations[] = {"+", "-", "*", "/", "^"};
 
     try {
-        ss.str(input);
         while (ss >> input)
         {
             int index = index_of(input, operations, 5);
