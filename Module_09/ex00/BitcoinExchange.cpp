@@ -188,7 +188,6 @@ bool BitcoinExchange::fileIsEmpty(const string &filename)
 {
     std::ifstream file(filename);
     return file.peek() == std::ifstream::traits_type::eof();
-    file.close();
 }
 
 void BitcoinExchange::validateNumber(const string &str) {
