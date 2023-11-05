@@ -212,8 +212,11 @@ void BitcoinExchange::validateNumber(const string &str) {
 
         // If there's a + or - sign check the next characters
         bool hasSign = str[0] == '+' || str[0] == '-';
-        if (!ft_all_of(str.substr(hasSign ? 1 : 0), &::isdigit))
+        for (size_t i = hasSign ? 1 : 0; i < str.length(); i++) {
+            if (::isdigit(str[i]) || str[i] == '.')
+                continue;
             throw std::invalid_argument("not a number => " + str);
+        }
 
         value = ft_stod(str);
 
