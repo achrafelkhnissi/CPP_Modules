@@ -29,11 +29,11 @@
 
 ### namespaces
 
-- **namespaces provides a method for preventing name conflicts in large projects**. It allows you to group symbols that are related together
+- **namespaces provide a method for preventing name conflicts in large projects**. It allows you to group symbols that are related together
 
 - All the entities included in the ```C++ standard library``` are included in the ```std``` namespace
 
-- However, ```using namespace std``` is considered bad practice, as it imports the entirety of the ```std``` namespace into the current namespace of the program. It's better to use scope resolution operator to access the specific entity (like ```std::cout```)
+- However, ```using namespace std``` is considered bad practice, as it imports the entirety of the ```std``` namespace into the current namespace of the program. It's better to use a scope resolution operator to access the specific entity (like ```std::cout```)
 
 ```C++
 int	gl_var = 1;
@@ -130,7 +130,7 @@ You entered: [xx]
 
 - C++ is an object-oriented programming language. An object is created from a class. Everything in C++ is associated with classes and objects, along with its attributes(```variables```) and methods(```functions```)
 
-- A class is a user-defined data type. It works as an object constructor, or a blueprint for creating objects. A class is ```static``` and it's a model which objects are built on. Instance is the dynamic part and it's an ```instantiation``` of a class
+- A class is a user-defined data type. It works as an object constructor, or a blueprint for creating objects. A class is ```static``` and it's a model on which objects are built on. Instance is the dynamic part and it's an ```instantiation``` of a class
 
 * ```Constructors``` and ```destructors``` are special member functions of classes that are used to construct and destroy class objects.
 	* ```Constructor``` may involve memory allocation and initialization for objects. ```Destructor``` may involve cleanup and deallocation of memory for objects
@@ -293,7 +293,7 @@ Destructor called
 
 - Initialization list is used in initializing the data members of a class. The list of members to be initialized is indicated with constructor as a ```comma-separated list``` followed by a colon
 
-> Example of initialization list
+> Example of the initialization list
 
 - *Sample.class.hpp*
 
@@ -365,7 +365,7 @@ Destructor called
 
 - Variables declared with ```const``` added become constants and cannot be altered by the program
 
-- ```const data members``` must be initialized using ```initialization list```. No memory is allocated separately for const data member. It is folded in the symbol table due to which we need to initialize it
+- ```const data members``` must be initialized using ```initialization list```. No memory is allocated separately for const data members. It is folded in the symbol table due to which we need to initialize it
 
 - ```const data members``` is also a copy constructor. We don't need to call the assignment operator which means we are avoiding one extra operation
 
@@ -460,7 +460,7 @@ Destructor called
 
 - ```Public``` attributes and functions can be accessed both inside and outside of the class
 
-- ```Private``` attributes and functions are only accessible from inside of the class. These attributes and functions are perfectly invisible and inaccessible from the outside of the class, otherwise, the code will not compile
+- ```Private``` attributes and functions are only accessible from inside the class. These attributes and functions are perfectly invisible and inaccessible from the outside of the class, otherwise, the code will not compile
 
 - **```Keep in mind```: for attributes or functions that have nothing to do with the user, keep them private in the class. When designing the class, always think about what to keep internally or expose to the outside**
 
@@ -579,9 +579,9 @@ Destructor called
 
 ### encapsulation
 
-- In Object Oriented Programming, encapsulation is defined as **binding together the data and the functions that manipulates them**. Encapsulation also leads to data abstraction or hiding
+- In Object Oriented Programming, encapsulation is defined as **binding together the data and the functions that manipulate them**. Encapsulation also leads to data abstraction or hiding
 
-- **Encapsulation is a means, not an end**. Encapsulation is useful only because it yields other things in our software that we care about. In particular, it yields flexibility and robustness
+- **Encapsulation is a means, not an end**. Encapsulation is useful only because it yields other things we care about in our software. In particular, it yields flexibility and robustness
 
 - Unencapsulated software is flexible, and as a result, it's not very robust. When the world changes, the software is unable to gracefully change with it
 
@@ -610,7 +610,7 @@ Destructor called
 
 - **In practice, all attributes of a class are private**. Getters are the interface between the user and private attributes, to be sure that the values are always correct.
 
-- They usually have the prefix of ```get``` and ```set```. Getter can only access in the read-only mode and won't alter the content of the class. It allows you to have some control over what to give to the user. It also sets control to the user's input and make sure that they make sense
+- They usually have the prefix ```get``` and ```set```. Getter can only access in the read-only mode and won't alter the content of the class. It allows you to have some control over what to give to the user. It also sets control to the user's input and makes sure that they make sense
 
 > Example of getter
 
@@ -834,7 +834,7 @@ Destructor called
 	- ```Instance``` variables / functions refers to ```member``` attributes / functions
 	- ```Class``` variables / functions refers to ```non member``` attributes / functions
 
-> An algorithm on whether to choose member function or non member function, created by Scott Meyers ([source link](https://www.drdobbs.com/cpp/how-non-member-functions-improve-encapsu/184401197))
+> An algorithm on whether to choose a member function or non-member function, created by Scott Meyers ([source link](https://www.drdobbs.com/cpp/how-non-member-functions-improve-encapsu/184401197))
 
 ``` C
 if (f needs to be virtual)
@@ -974,7 +974,7 @@ Number of instances = 0
 
 ### pointers to members
 
-- To have pointer to data member and member functions, you need to make them public
+- To have a pointer to data member and member functions, you need to make them public
 
 > Example of pointers
 
@@ -1083,11 +1083,11 @@ Destructor called
 - ```str.at(int index)```. Retrieve the character at a position with the benefit of built-in range-checking.
 - ```==``` / ```!=```. Compare two strings for equality
 - ```s1 + s2``` / ```+=```. Appending another string or a single character to the end of a string
-- ```str.find(key)``` / ```str.find(key, n)```. Search within a string for a particular string or character. ```key``` can either be a string or a character. We say the find member function is overloaded to allow more than one usage.
+- ```str.find(key)``` / ```str.find(key, n)```. Search within a string for a particular string or character. ```key``` can either be a string or a character. We say the find member function is overloaded to allow more than one use.
 - ```str.substr(start, length)```. Extract substrings. Create new strings by extracting portions of a larger one. This member function does not change the receiver string, as it makes a ```new``` string with a copy of the characters specified.
 - ```str1.insert(start, str2)``` / ```str1.replace(start, length, str2)```. Modify a string by inserting and replacing. These functions do modify the receive string
 - ```C-style string```. Although old-style C char * strings and C++ strings can co-exist in a program, almost all use will be of C++ strings, since they have a much richer set of operations and are less error-prone to work with. However, when working with file streams, it's unavoidable to use C-style string
-- **Important: When using ```(std::string str)``` as parameter, it takes a copy from the calling function to the destination function. It is not fast to dynamically allocate a string to create a copy. If you are not going to modify the string, send it as a ```const &```, in this way, it will not create a copy**
+- **Important: When using ```(std::string str)``` as a parameter, it takes a copy from the calling function to the destination function. It is not fast to dynamically allocate a string to create a copy. If you are not going to modify the string, send it as a ```const &```, in this way, it will not create a copy**
 
 ## Difference between std::cin and getline
 
@@ -1102,7 +1102,7 @@ Destructor called
 ## Static attributes & functions within a class
 
 - **Static attribute**:
-	- There will only be ```one instance of that variable```, no mater how many objects you've instantiated. If one instance changes the variable, the change will be reflected on all instances
+	- There will only be ```one instance of that variable```, no matter how many objects you've instantiated. If one instance changes the variable, the change will be reflected in all instances
 	- Therefore, it does not make sense to refer to the attributes inside an instance, but rather by ```className::attributeName```
 	- It is still different from a global variable because this static attribute is still inside a class
 
